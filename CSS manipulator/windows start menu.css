@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.red{color: rgb(255, 0, 0);}
+.start-area {
+}
+.go-back-button {
+    position: fixed;
+    top:125px;
+    left: 25px;
+    color:#1a66f1;     
+    font-size: 4em;
+    
+}
+.icon2x {
+    font-size: 2em;
+}
+.icon3x {
+    font-size: 3em;
+}
+.info-menu {
+    position: fixed;
+    top: 0;
+    font-size: 30px;
+    line-height: 56px;
+    height: 56px;
+    background-color: black;
+    color: white;
+    width: 70%;
+    padding: 0 15%;
+    font-family: 'Arial Rounded MT' sans-serif;
+}
+
+    .info-menu .heading {
+        float: left;
+    }
+
+    .info-menu .user-info {
+        float: right;
+        font-size: 0.5em;
+        vertical-align: baseline;
+    }
+
+.menu {
+    margin-top: 100px;
+    margin-left: 100px;
+    min-width: 100%;
+    max-height: 500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+    .menu .menu-box {
+        min-width: 500px;
+        float: left;
+        margin-right: 50px;
+    }
+
+        .menu .menu-box:last-of-type {
+            margin-right: 0;
+        }
+
+        .menu .menu-box .menu-col {
+            float: left;
+            min-width: 100px;
+        }
+
+            .menu:last-child::after,
+            .menu .menu-box .menu-col:last-child::after {
+                clear: left;
+                content: '';
+                display: inline;
+            }
+
+            .menu .menu-box .menu-col .menu-item {
+                height: 100px;
+                width: 150px;
+                margin: 4px 2px;
+                padding: 4px;
+                background-color: #aaa;
+            }
+
+.options-menu {
+    display:initial ;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 110px;
+    width: 100%;
+    background-color: orange;
+}
+
+    .options-menu .option {
+        float: left;
+        width: 100px;
+        height: 80px;
+        padding: 10px;
+        margin: auto 10px;
+        font-size:1.4em;
+        cursor:pointer;
+        text-align:center;
+    }
+        .options-menu .option .icon {
+            color: white;
+            -webkit-text-shadow: 2px 2px 2px black;
+            text-shadow: 2px 2px 2px black;
+            
+        }
+    .options-menu .option:last-of-type{
+        float: right;
+    }
