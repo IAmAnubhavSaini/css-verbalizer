@@ -1,10 +1,10 @@
 
-t_node* ruleizer(char *file_name){
+r_node* ruleizer(char *file_name){
   FILE *fp = fopen(file_name, "r");
   int space_seen =0;
   int opened_brace=0;
   char ch;
-  t_node *start, *temp = (t_node*)malloc(sizeof(t_node)), *current;
+  r_node *start, *temp = (r_node*)malloc(sizeof(r_node)), *current;
   char tempStr[MaxRuleSize];
   int tempStrIndex = 0;
   temp->next = NULL;
@@ -24,7 +24,7 @@ t_node* ruleizer(char *file_name){
           strcpy(temp->rule_name, tempStr);
           current = temp;
           //re-initialize
-          temp = (t_node *)malloc(sizeof(t_node));
+          temp = (r_node *)malloc(sizeof(r_node));
           temp->next = NULL;
           current->next = temp;
           tempStrIndex = 0;
@@ -43,8 +43,8 @@ t_node* ruleizer(char *file_name){
   return start;
 }
 
-void rule_printer(t_node *start){
-  t_node *current = start;
+void rule_printer(r_node *start){
+  r_node *current = start;
   while(current->next!=NULL){
     printf("\n%s",current->rule_name);
     current = current->next;

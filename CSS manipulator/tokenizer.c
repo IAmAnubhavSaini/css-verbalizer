@@ -40,7 +40,7 @@ t_node* tokenizer(char *file_name){
 void token_printer(t_node *start){
   t_node *current = start;
   while(current->next!=NULL){
-    printf("\n%s",current->token_name);
+    printf("\n%s",current->token_name );
     current = current->next;
   }
 }

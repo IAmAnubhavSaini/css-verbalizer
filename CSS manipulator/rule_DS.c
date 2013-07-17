@@ -7,7 +7,7 @@ struct rule_node {
   char rule_name[MaxRuleSize];
   struct rule_node *next;
 };
-typedef struct rule_node t_node;
+typedef struct rule_node r_node;
 int IsRuleBoundary(char ch){
   int i =0;
   for(i=0; i<RuleBoundaryCount; i++){
