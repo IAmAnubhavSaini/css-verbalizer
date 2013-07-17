@@ -2,12 +2,19 @@
 #define MaxRuleSize 100
 
 char rule_boundaries []= {';','\n'};
-
-struct rule_node {
-  char rule_name[MaxRuleSize];
-  struct rule_node *next;
+struct selector_node{
+  char *Selector;
+  int LineNumber;
+  char *Id;
+  Rules *FirstRule;
+  int RuleCount;
 };
-typedef struct rule_node r_node;
+typedef struct selector_node Selectors;
+struct rule_node {
+  char *Rule
+  struct rule_node *Next;
+};
+typedef struct rule_node Rules;
 int IsRuleBoundary(char ch){
   int i =0;
   for(i=0; i<RuleBoundaryCount; i++){
