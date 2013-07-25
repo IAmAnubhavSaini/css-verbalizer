@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include "rule_DS.c"
-#include "ruler.c"
+
+
 #include "token_DS.c"
 #include "tokenizer.c"
 int main(int argc, char *argv[]){

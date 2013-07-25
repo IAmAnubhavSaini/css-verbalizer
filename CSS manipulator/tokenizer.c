@@ -3,7 +3,7 @@ t_node* tokenizer(char *file_name){
   int space_seen =0;
   char ch;
   t_node *start, *temp = (t_node*)malloc(sizeof(t_node)), *current;
-  char tempStr[MaxTokenSize];
+  char tempStr[MaxCssTokenSize];
   int tempStrIndex = 0;
   temp->next = NULL;
   start = temp;
@@ -14,7 +14,7 @@ t_node* tokenizer(char *file_name){
   else{
     while((ch=fgetc(fp))!=EOF){
       if(ch==' ')space_seen++; else space_seen=0;
-      if(IsTokenBoundary(ch)){
+      if(DYN_IsTokenBoundary(ch)){
         if(tempStrIndex>0){
           tempStr[tempStrIndex] = '\0';
           strcpy(temp->token_name, tempStr);
