@@ -1,4 +1,14 @@
-char rule_separators[] = {';','\n'};
-char selector_seperators[] = {'{',','};
-int inside_block = 0;
+/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/css-verbalizer
+ *
+ * purpose
+ * -------
+ * this is header for tokenizer functionality
+ *
+ * Licence
+ * -------
+ * MIT
+ */
 
+ 

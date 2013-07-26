@@ -50,4 +50,7 @@ t_node* tokenizer(char *);
  */
 void token_printer(t_node *);
 
+#include "token_DS.c"
+#include "tokenizer.c"
+
  #endif

@@ -1,4 +1,17 @@
-﻿#define ANSI_COLOR_RED     "\x1b[31m"
+﻿/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/css-verbalizer
+ *
+ * purpose
+ * -------
+ * this is header for tokenizer functionality
+ *
+ * Licence
+ * -------
+ * MIT
+ */
+
+#define ANSI_COLOR_RED     "\x1b[31m"
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 #define ANSI_COLOR_YELLOW  "\x1b[33m"
 #define ANSI_COLOR_BLUE    "\x1b[34m"
