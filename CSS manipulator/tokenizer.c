@@ -1,3 +1,21 @@
+/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/css-verbalizer
+ *
+ * purpose
+ * -------
+ * this is tokenizer for css code
+ *
+ * Licence
+ * -------
+ * MIT
+ */
+
+#ifndef TOKENIZERC
+#define TOKENIZERC
+ 
+#include "tokenizer.h"
+
 t_node* tokenizer(char *file_name){
   FILE *fp = fopen(file_name, "r");
   int space_seen =0;
@@ -44,3 +62,5 @@ void token_printer(t_node *start){
     current = current->next;
   }
 }
+
+#endif

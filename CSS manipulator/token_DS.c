@@ -1,10 +1,22 @@
+/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/css-verbalizer
+ *
+ * purpose
+ * -------
+ * this is tokenizer for css code
+ *
+ * Licence
+ * -------
+ * MIT
+ */
+
 #ifndef CSSVERBALIZERTOKENDS
 #define CSSVERBALIZERTOKENDS
 
 #include "../anubhavDS-C/helpers.c"
+#include "tokenizer.h"
 
-//Maximum css token size: like [1px 1px 1px black, 2px -2px 2px yello...]
-#define MaxCssTokenSize 100
 
 char valid_css_token_boundaries []= {' ', ',', ';', ':', '}', '{', '\n', '\t', '(', ')', '#'};
 #define TokenBoundaryCount 11
@@ -32,11 +44,6 @@ c == valid_css_chars_extra [2]	||	\
 c == valid_css_chars_extra [3]		\
 )
 
-struct token_node {
-  char token_name[MaxCssTokenSize];
-  struct token_node *next;
-};
-typedef struct token_node t_node;
 
 //Dynamic: when code-plugging is available
 int DYN_IsTokenBoundary(char ch){
