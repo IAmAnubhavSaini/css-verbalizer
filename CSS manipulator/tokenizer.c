@@ -8,15 +8,16 @@ t_node* tokenizer(char *file_name){
   temp->next = NULL;
   start = temp;
   current = temp;
+
   if(fp == NULL){
-    return;
+    return NULL;
   }
   else{
     while((ch=fgetc(fp))!=EOF){
       if(ch==' ')space_seen++; else space_seen=0;
-      if(DYN_IsTokenBoundary(ch)){
-        if(tempStrIndex>0){
-          tempStr[tempStrIndex] = '\0';
+      if(DYN_IsTokenBoundary(ch)){ 				//if it is a token boundary
+        if(tempStrIndex>0){ 					//and we have a string, signalled by tempStrIndex's walk on the number line towards right
+          tempStr[tempStrIndex] = '\0'; 		//then of course we need to finish building a token
           strcpy(temp->token_name, tempStr);
           current = temp;
           //re-initialize
@@ -25,10 +26,9 @@ t_node* tokenizer(char *file_name){
           current->next = temp;
           tempStrIndex = 0;
         }
-
       }
       else{
-        if(space_seen<=1){
+        if(space_seen<=1){ 						//space_seen==0 means inside a token already, 1 means first char of token.
           tempStr[tempStrIndex++] = ch;
         }
       }
