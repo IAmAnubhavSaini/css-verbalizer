@@ -24,9 +24,9 @@
  * and a next pointer. 
  */
 typedef struct token_node t_node;
- struct token_node {
-  char token_name[MaxCssTokenSize];
-  t_node *next;
+struct token_node {
+    char token_name[MaxCssTokenSize];
+    t_node *next;
 };
 
 
@@ -37,13 +37,13 @@ typedef struct token_node t_node;
  * output: 1-success, 0-failure. due to "Is"
  */
 int DYN_IsTokenBoundary(char);
- 
+
 /* tokenizer function 
  * input: file path of the css file
  * output: first token of the linked-list of the tokens
  */
-t_node* tokenizer(char *);
- 
+t_node *tokenizer(char *);
+
 /* token printer prints tokens line wise it encountered, one per line
  * input: first token node
  * output: on standard output, no return
@@ -53,4 +53,4 @@ void token_printer(t_node *);
 #include "token_DS.c"
 #include "tokenizer.c"
 
- #endif
+#endif
